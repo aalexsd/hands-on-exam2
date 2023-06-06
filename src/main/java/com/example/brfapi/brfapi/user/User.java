@@ -22,8 +22,17 @@ public class User {
     private String name;
     private String role;
 
-    public User(UserRegisterData dados) {
-        this.name = dados.name();
-        this.role = dados.role();
+    public User(UserRegisterData data) {
+        this.name = data.name();
+        this.role = data.role();
+    }
+
+    public void updateInfo(UserUpdateData data) {
+        if(data.name() != null){
+            this.name = data.name();
+        }
+        if(data.role() != null){
+            this.role = data.role();
+        }
     }
 }
