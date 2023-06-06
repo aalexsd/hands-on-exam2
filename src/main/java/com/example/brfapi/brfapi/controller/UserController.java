@@ -29,6 +29,11 @@ public class UserController {
     }
 
 
+    @GetMapping("/{id}")
+    public User findById(@PathVariable Long id){
+        return repository.findById(id).orElse(null);
+    }
+
     @PutMapping
     @Transactional
     public void update(@RequestBody UserUpdateData data){
