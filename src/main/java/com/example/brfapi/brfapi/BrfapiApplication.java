@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BrfapiApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(BrfapiApplication.class, args);
 	}
 
